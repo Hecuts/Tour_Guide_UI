@@ -73,8 +73,8 @@ class _BottomButtonState extends State<BottomButton>
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color(0xff4cf34f),
-                Color(0xff3cd5ac),
+                Color(0xff45b6fe),
+                Color(0xff7434a4),
               ],
             )),
           child: Center(

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'GuidesPage',
       theme: ThemeData(
-        primaryColor: Colors.green[300],
+        primaryColor: Color(0xff45b6fe),
         scaffoldBackgroundColor: Colors.green[ 50],
         accentColor: Colors.teal[300],
         textTheme: TextTheme(
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      home: AddGuides(),
+      home:GuidesPage(),
     );
   }
 }

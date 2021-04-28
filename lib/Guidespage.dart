@@ -5,6 +5,7 @@ import 'Constants.dart';
 import 'package:get/get.dart';
 import 'GuideDetail.dart';
 import 'package:get/get.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 class GuidesPage extends StatelessWidget {
 
   int _counter = 0;
@@ -29,7 +30,7 @@ class GuidesPage extends StatelessWidget {
           Expanded(
             //flex: 5,
             child: GridView.builder(
-                padding: EdgeInsets.only(top: 50.0, left: 10.0, right: 10.0),
+                padding: EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
                 //scrollDirection: Axis.horizontal, // for the listview of the hotels and attraction sites.
                 itemCount: listOfGuides.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -52,6 +53,16 @@ class GuidesPage extends StatelessWidget {
                         ),
                       ),
                       Text("${listOfGuides[index]}"),
+                      RatingBarIndicator(
+                        rating: 2.75,
+                        itemBuilder: (context, index) => Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        itemCount: 5,
+                        itemSize: 10.0,
+                        direction: Axis.horizontal,
+                      ),
                     ],
                   ),
                 ),

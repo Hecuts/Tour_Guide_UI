@@ -1,4 +1,5 @@
 //import 'dart:html';
+//import 'dart:html';
 import 'dart:io';
 import 'package:counter_app1/Constants.dart';
 import 'package:image_picker/image_picker.dart';
@@ -70,6 +71,7 @@ class _AddGuidesState extends State<AddGuides> {
   }
   Widget _buildEmail(){
     return TextFormField(
+      keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
           labelText: 'Email',
           hintText: 'ZelekeGessesse@gmail.com',
@@ -95,6 +97,7 @@ class _AddGuidesState extends State<AddGuides> {
   }
   Widget _buildPassword(){
     return TextFormField(
+      obscureText: true,
       decoration: InputDecoration(
           labelText: 'Password',
       hintText: '',
@@ -102,8 +105,6 @@ class _AddGuidesState extends State<AddGuides> {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20.0),
           )),
-
-      keyboardType: TextInputType.visiblePassword,
       validator: (String value){
         if(value.isEmpty) {
           return 'Password is required';
@@ -117,6 +118,7 @@ class _AddGuidesState extends State<AddGuides> {
   }
   Widget _confirmPassword(){
     return TextFormField(
+        obscureText: true,
       decoration: InputDecoration(
           labelText: ' Confirm Password',
           hintText: '',
@@ -244,7 +246,9 @@ class _AddGuidesState extends State<AddGuides> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-        title: Text('Add Guides',
+        title: Text(
+          'Add Guides',
+          textAlign: TextAlign.center,
         style: kTitleTextStyle,),
     ),
     body: SingleChildScrollView(
